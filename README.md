@@ -1,44 +1,39 @@
-# Document_Analysis_App
-Repository Structure:
-Document_Analysis_App/
-│
-├── main.py                # Streamlit app main file
-├── text_extraction.py     # All text extraction logic
-├── comparison.py          # Document comparison logic
-├── requirements.txt       # All dependencies
-├── README.md              # Project info and usage
-├── .gitignore
-└── sample_documents/      # Sample PDFs, DOCX, TXT for testing
+# Intelligent Document Analysis
+
+The main objective of this project is to create a document analysis application where users can upload different document types (PDF, DOCX, TXT) and extract key insights, summaries, and answers to questions from the content of documents. The application is powered by advanced NLP models for text summarization, entity recognition, and document comparison.
+
+## 🏗️ Project Structure
+```
+├── main.py                    # Main execution file
+├── text_extraction.py         # extrct text from the file uploaded
+├── summarization              # summarize the text from file
+├── question_answering.py      # answer the questions based on content in file
+├── comparision.py             # compare two files
+```
+
+### Key Features
+- **Text Extraction** (`text_extraction.py`): Extracts text from documents.
+- **Summarization** (`summarization.py`): Generates concise summaries of text.
+- **Question Answering** (`question_answering.py`): Answers questions based on provided text.
+- **Comparison** (`comparison.py`): Compares different text inputs.
+- **Main Script** (`main.py`): Runs the entire pipeline.
+
+## Implementation Workflow
+1.	User uploads a document.
+2.	System detects the file format and extracts text accordingly.
+3.	Extracted text is displayed with a metadata summary.
+4.	User selects an action (Summarization, Q&A, Insights, Comparison).
+5.	NLP models process the text and generate output.
+6.	Results are displayed in a structured format
+
+## 🚀 Workflow
+1. Add your API ID in the `.env` file.
+2. Execute `main.py` to see the result.
 
 
-## Overview
-This Streamlit-based app allows users to upload documents (PDF, DOCX, TXT) and instantly extract insights, summarize content, perform Q&A, and compare multiple documents.
+## 📌 Note
+- Ensure you have the necessary API keys in the `.env` file before running the scripts.
 
 ---
-
-## Features
-- **Document Upload:** Supports PDF, DOCX, and TXT files
-- **Text Extraction:** Extracts clean text for analysis
-- **Summarization:** AI-based summarization for long documents
-- **Q&A:** Ask questions about your document content
-- **Key Insights:** Automatically generates key points
-- **Document Comparison:** Compare two PDFs to spot differences
-
----
-
-## How It Works
-1. Upload your document(s)
-2. Text is extracted and analyzed using **transformers & Groq AI**
-3. Results are displayed in an interactive Streamlit dashboard
-4. Optionally, compare two PDFs side-by-side
-
----
-
-## Installation
-```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/Document_Analysis_App.git
-cd Document_Analysis_App
-python -m venv .venv
-.\.venv\Scripts\activate   # Windows
-pip install -r requirements.txt
-streamlit run main.py
+## 📄 License
+Intelligent Document Analysis is released under the [MIT License](LICENSE), allowing you to freely use, modify, and distribute the project.
